@@ -56,5 +56,9 @@ public class ToolPanel extends JPanel implements ActionListener {
         if( e.getSource() == drawButton) {
             driverRef.setCurrToolToPen();
         }
+
+        if(e.getSource() == sizeButton){
+            driverRef.setCurrToolToBrushSize();
+        }
     }
 }
