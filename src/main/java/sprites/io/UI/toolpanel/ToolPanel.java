@@ -30,12 +30,14 @@ public class ToolPanel extends JPanel implements ActionListener {
         drawButton.addActionListener(this);
         eraseButton.addActionListener(this);
         sizeButton.addActionListener(this);
+        fillButton.addActionListener(this);
         lineButton.addActionListener(this);
         colorButton.addActionListener(this);
 
         this.add(drawButton);
         this.add(eraseButton);
         this.add(sizeButton);
+        this.add(fillButton);
         this.add(lineButton);
         this.add(colorButton);
     }

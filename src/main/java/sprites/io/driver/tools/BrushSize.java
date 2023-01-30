@@ -5,7 +5,7 @@ import sprites.io.UI.canvaspanel.Canvas;
 
 public class BrushSize extends Tool {
 
-    int currentSize = 1;
+    int currentSize = 3;
 
     public void draw(Canvas canvas, Color color, boolean isMousePressed, int mousePressLocation, int mouseCurrentLocation){
         if(isMousePressed){
