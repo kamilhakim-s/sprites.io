@@ -9,7 +9,6 @@ import java.awt.event.ActionListener;
 
 public class ToolPanel extends JPanel implements ActionListener {
 
-    private Color prevColor = Color.BLACK;
 
     private JButton drawButton = new JButton("DRAW");
     private JButton eraseButton = new JButton("ERASER");
@@ -19,6 +18,7 @@ public class ToolPanel extends JPanel implements ActionListener {
     private JButton colorButton = new JButton("CHANGE COLOR");
 
     Driver driverRef;
+    private Color prevColor = Color.black;
 
     public ToolPanel(int posx, int posy, int width, int height, Driver driver) {
         driverRef = driver;
@@ -58,6 +58,7 @@ public class ToolPanel extends JPanel implements ActionListener {
         }
 
         if( e.getSource() == drawButton) {
+            driverRef.setCurrColor(this.prevColor);
             driverRef.setCurrToolToPen();
         }
 
@@ -73,7 +74,9 @@ public class ToolPanel extends JPanel implements ActionListener {
                     null,
                     options,
                     options[2]);
-            driverRef.setBrushSize(n);
+
+            // set the size, and set the tool to brush
+            driverRef.setBrushSize(n+1);
             driverRef.setCurrToolToBrushSize();
         }
 
