@@ -61,6 +61,17 @@ public class ToolPanel extends JPanel implements ActionListener {
         }
 
         if(e.getSource() == sizeButton){
+            // pop up dialog box to ask for the size
+            Object[] options = {"small", "medium", "large"};
+            int n = JOptionPane.showOptionDialog(null,
+                    "Choose a size",
+                    "Size",
+                    JOptionPane.YES_NO_CANCEL_OPTION,
+                    JOptionPane.QUESTION_MESSAGE,
+                    null,
+                    options,
+                    options[2]);
+            driverRef.setBrushSize(n);
             driverRef.setCurrToolToBrushSize();
         }
 

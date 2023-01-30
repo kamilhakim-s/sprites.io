@@ -19,6 +19,7 @@ public class Driver {
     private int mouseCurrentLocation = 0;
     private Tool currTool = new PenTool();
     private Color currColor = new Color(0, 0, 0);
+    private int brushSize = 1;
 
     public Driver(Canvas canvas) {
         this.canvas = canvas;
@@ -54,5 +55,13 @@ public class Driver {
 
     public void setMouseCurrentLocation(int mouseCurrentLocation) {
         this.mouseCurrentLocation = mouseCurrentLocation;
+    }
+
+    public void setBrushSize(int brushSize) {
+        this.brushSize = brushSize;
+    }
+
+    public int getBrushSize() {
+        return brushSize;
     }
 }
