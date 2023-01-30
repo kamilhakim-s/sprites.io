@@ -50,6 +50,7 @@ public class ToolPanel extends JPanel implements ActionListener {
             Color color = JColorChooser.showDialog(null, "Pick a color", Color.black);
             driverRef.setCurrColor(color);
             this.prevColor = color;
+            colorButton.setBackground(color);
         }
 
         if (e.getSource() == eraseButton) {
@@ -61,6 +62,7 @@ public class ToolPanel extends JPanel implements ActionListener {
         }
 
         if(e.getSource() == sizeButton){
+
             // pop up dialog box to ask for the size
             Object[] options = {"small", "medium", "large"};
             int n = JOptionPane.showOptionDialog(null,
@@ -79,4 +81,5 @@ public class ToolPanel extends JPanel implements ActionListener {
             driverRef.setCurrToolToFillTool();
         }
     }
+
 }

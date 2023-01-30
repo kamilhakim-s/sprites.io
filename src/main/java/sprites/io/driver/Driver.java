@@ -2,10 +2,10 @@ package sprites.io.driver;
 
 import java.awt.Color;
 import sprites.io.UI.canvaspanel.Canvas;
-import sprites.io.driver.tools.EraserTool;
+import sprites.io.driver.tools.Eraser;
 import sprites.io.driver.tools.PenTool;
 import sprites.io.driver.tools.Tool;
-import sprites.io.driver.tools.BrushSize;
+import sprites.io.driver.tools.Brush;
 import sprites.io.driver.tools.FillTool;
 
 /**
@@ -33,8 +33,8 @@ public class Driver {
     }
 
     public void setCurrToolToPen() {this.currTool = new PenTool();}
-    public void setCurrToolToEraser() {this.currTool = new EraserTool();}
-    public void setCurrToolToBrushSize() {this.currTool = new BrushSize();}
+    public void setCurrToolToEraser() {this.currTool = new Eraser();}
+    public void setCurrToolToBrushSize() {this.currTool = new Brush();}
     public void setCurrToolToFillTool() {this.currTool = new FillTool();}
 
     /**
