@@ -3,9 +3,9 @@ package sprites.io.driver;
 import java.awt.Color;
 import sprites.io.UI.canvaspanel.Canvas;
 import sprites.io.driver.tools.EraserTool;
-import sprites.io.driver.tools.PenSizeTool;
 import sprites.io.driver.tools.PenTool;
 import sprites.io.driver.tools.Tool;
+import sprites.io.driver.tools.BrushSize;
 
 /**
  * Manages all the tools to draw on the canvas
@@ -32,7 +32,7 @@ public class Driver {
 
     public void setCurrToolToPen() {this.currTool = new PenTool();}
     public void setCurrToolToEraser() {this.currTool = new EraserTool();}
-    public void setCurrToolToBrushSize() {this.currTool = new PenSizeTool();}
+    public void setCurrToolToBrushSize() {this.currTool = new BrushSize();}
 
     /**
      * change the current color
