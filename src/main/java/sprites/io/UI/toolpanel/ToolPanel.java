@@ -14,6 +14,7 @@ public class ToolPanel extends JPanel implements ActionListener {
     private JButton drawButton = new JButton("DRAW");
     private JButton eraseButton = new JButton("ERASER");
     private JButton sizeButton = new JButton("SIZE");
+    private JButton fillButton = new JButton("FILL");
     private JButton lineButton = new JButton("LINE");
     private JButton colorButton = new JButton("CHANGE COLOR");
 
@@ -59,6 +60,10 @@ public class ToolPanel extends JPanel implements ActionListener {
 
         if(e.getSource() == sizeButton){
             driverRef.setCurrToolToBrushSize();
+        }
+
+        if(e.getSource() == fillButton){
+            driverRef.setCurrToolToFillTool();
         }
     }
 }
