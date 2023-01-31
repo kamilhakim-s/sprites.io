@@ -5,15 +5,20 @@ import sprites.io.UI.canvaspanel.Canvas;
 
 public class Brush extends Tool {
 
-
     private Canvas canvas;
     private Color color;
     private boolean isMousePressed;
     private int mousePressLocation;
     private int mouseCurrentLocation;
     private int currentSize;
+    
+    // constructor
+    public Brush(int size) {
+        this.currentSize = size;
+    }
+    
 
-    public void draw(Canvas canvas, Color color, boolean isMousePressed, int mousePressLocation, int mouseCurrentLocation, int currentSize){
+    public void draw(Canvas canvas, Color color, boolean isMousePressed, int mousePressLocation, int mouseCurrentLocation){
 
         // store all the variables in the class
         this.canvas = canvas;
@@ -21,7 +26,6 @@ public class Brush extends Tool {
         this.isMousePressed = isMousePressed;
         this.mousePressLocation = mousePressLocation;
         this.mouseCurrentLocation = mouseCurrentLocation;
-        this.currentSize = currentSize;
         
         if(isMousePressed){
             // color the pixel

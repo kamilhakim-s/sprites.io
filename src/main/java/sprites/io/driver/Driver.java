@@ -33,8 +33,8 @@ public class Driver {
     }
 
     public void setCurrToolToPen() {this.currTool = new PenTool();}
-    public void setCurrToolToEraser() {this.currTool = new Eraser();}
-    public void setCurrToolToBrushSize() {this.currTool = new Brush();}
+    public void setCurrToolToEraser() {this.currTool = new Eraser(brushSize);}
+    public void setCurrToolToBrushSize() {this.currTool = new Brush(brushSize);}
     public void setCurrToolToFillTool() {this.currTool = new FillTool();}
 
     /**

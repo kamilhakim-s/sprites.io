@@ -6,9 +6,12 @@ import java.awt.*;
 
 public class Eraser extends Brush {
     
+    public Eraser(int size) {
+        super(size);
+    }
 
     @Override
-    public void draw(Canvas canvas, Color color, boolean isMousePressed, int mousePressLocation, int mouseCurrentLocation, int currentSize) {
-        super.draw(canvas, Color.WHITE, isMousePressed, mousePressLocation, mouseCurrentLocation, currentSize);
+    public void draw(Canvas canvas, Color color, boolean isMousePressed, int mousePressLocation, int mouseCurrentLocation) {
+        super.draw(canvas, Color.WHITE, isMousePressed, mousePressLocation, mouseCurrentLocation);
     }
 }
